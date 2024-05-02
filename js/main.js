@@ -40,6 +40,10 @@ buttonClick.addEventListener("click", function() {
                 document.getElementById("bombe").innerText = (errori);
                 if (errori >= 3) {
                     alert("HAI PERSO!!!");
+                    
+                    // ricarica la pagina dopo l'alert
+                    window.location.reload();
+
                 }
 
                 
@@ -48,6 +52,10 @@ buttonClick.addEventListener("click", function() {
                 document.getElementById("punteggio").innerText = (punteggio);
                 if (punteggio >= 84) {
                     alert("HAI VINTO!!!");
+                    setTimeout(function() {
+                        window.location.reload();
+                    }, 3000); 
+                    // Attendi 3 secondi prima di ricaricare la pagina
                 }
             };
 
