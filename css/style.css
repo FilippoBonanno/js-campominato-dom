@@ -18,6 +18,10 @@
     background-color: red;
 }
 
+.bomba {
+    background-color: blue;
+}
+
 #grid {
     width: 800px;
     margin: 0 auto;
