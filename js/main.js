@@ -5,12 +5,15 @@ let grid = document.getElementById ("grid");
 let buttonClick = document.getElementById ("button");
 
 
-
+let errori = 0;
+let punteggio = 0;
 buttonClick.addEventListener("click", function() {
 
     // Chiamata alla funzione per generare le bombe
     const bombe = bombeGenerator();
     console.log("Bombe generate:", bombe);
+    
+    
 
     
     grid.innerHTML = "";
@@ -33,14 +36,33 @@ buttonClick.addEventListener("click", function() {
             if (bombe.includes(i)) {
                 quadrato.classList.remove("active");
                 quadrato.classList.add("bomba");
+                errori += 1 ;
+                document.getElementById("bombe").innerText = (errori);
+                if (errori >= 3) {
+                    alert("HAI PERSO!!!");
+                }
+
                 
+            }else {
+                punteggio += 1 ;
+                document.getElementById("punteggio").innerText = (punteggio);
+                if (punteggio >= 84) {
+                    alert("HAI VINTO!!!");
+                }
             };
+
+            
         });
+
+    
         
     grid.append(quadrato);
-     
     }
-  });
+
+
+});
+console.log(`Hai fatto: ${errori} Errori`);
+console.log(`il tuo punteggio è: ${punteggio} Punti`);
  
 
   

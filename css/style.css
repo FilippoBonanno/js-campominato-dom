@@ -31,3 +31,9 @@
     padding: 1rem;
     
  }
+
+ li {
+    width: 10rem;
+    position: relative;
+    left: 105rem;
+ }
