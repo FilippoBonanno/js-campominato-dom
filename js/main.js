@@ -18,7 +18,7 @@ buttonClick.addEventListener("click", function() {
         let quadrato = squareCreate(i);
     
         quadrato.addEventListener("click", function() {
-            
+            this.removeEventListener("click", arguments.callee);
             quadrato.classList.toggle("active");
     
             if (quadrato.classList.contains("active")) {
@@ -40,14 +40,11 @@ buttonClick.addEventListener("click", function() {
                     
                     // ricarica la pagina dopo l'alert
                     window.location.reload();
-
-                }
-
-                
+                }   
             }else {
                 punteggio += 1 ;
                 document.getElementById("punteggio").innerText = (punteggio);
-                if (punteggio >= 84) {
+                if (punteggio >= 35) {
                     alert("HAI VINTO!!!");
                     setTimeout(function() {
                         window.location.reload();
