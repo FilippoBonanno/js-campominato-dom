@@ -34,6 +34,12 @@
 
  li {
     width: 10rem;
-    position: relative;
-    left: 105rem;
+    /* position: relative;
+    left: 105rem; */
+ }
+
+ .container_2 {
+    display:flex;
+    justify-content: space-between;
+    
  }

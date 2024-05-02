@@ -13,9 +13,6 @@ buttonClick.addEventListener("click", function() {
     const bombe = bombeGenerator();
     console.log("Bombe generate:", bombe);
     
-    
-
-    
     grid.innerHTML = "";
     for (let i = 1; i <= 100; i++) {
         let quadrato = squareCreate(i);
