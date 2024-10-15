@@ -56,8 +56,6 @@ buttonClick.addEventListener("click", function() {
             
         });
 
-    
-        
     grid.append(quadrato);
     }
 
